@@ -5,7 +5,9 @@ import cardData from "./data/card-data";
 function App() {
   return (
     <div className="cards">
-      <Card name={cardData[0].name} image={cardData[0].image} />
+      {cardData.map((card) => (
+        <Card name={card.name} image={card.image} />
+      ))}
     </div>
   );
 }
